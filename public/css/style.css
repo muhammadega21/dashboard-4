@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f1eb;
+  color: #2c2b2b;
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  grid-template-columns: 225px 1fr;
+  grid-template-areas: "sidebar navbar" "sidebar main";
+}
+
+/* Navbar */
+
+nav {
+  grid-area: navbar;
+  background-color: #fff;
+  margin: 10px 20px;
+}
+
+/* Navbar */
+
+/* Sidebar */
+
+aside {
+  grid-area: sidebar;
+  background-color: #fff;
+  height: 100vh;
+}
+
+/* Sidebar */
+
+/* Content */
+
+main {
+  grid-area: main;
+  margin: 10px 20px;
+}
+
+.content-wrapper {
+}
+
+/* Content */

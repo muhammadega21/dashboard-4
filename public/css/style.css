@@ -1,9 +1,26 @@
+@font-face {
+  font-family: "inter";
+  src: url(/public/font/Inter.woff);
+}
+
+:root {
+  --background: #f2f1eb;
+  --text: #464646;
+  --light: #fff;
+  --primary: linear-gradient(
+    137deg,
+    rgb(109, 31, 255) 0%,
+    rgb(138, 18, 251) 35%,
+    rgb(199, 23, 253) 100%
+  );
+}
+
 body {
-  background-color: #f2f1eb;
-  color: #2c2b2b;
+  font-family: "inter", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
   display: grid;
-  grid-template-rows: 70px 1fr;
-  grid-template-columns: 225px 1fr;
+  grid-template-rows: 65px 1fr;
   grid-template-areas: "sidebar navbar" "sidebar main";
 }
 
@@ -11,8 +28,66 @@ body {
 
 nav {
   grid-area: navbar;
-  background-color: #fff;
-  margin: 8px 12px;
+  background-color: var(--light);
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+nav .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+}
+
+nav .nav-left .btn {
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+nav .nav-left .btn button {
+  transition: 0.2s;
+  background: var(--primary);
+}
+
+nav .nav-left .btn button:hover {
+  opacity: 0.85;
+}
+
+nav .nav-left .btn i {
+  margin-left: 2px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+nav .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav .nav-right i {
+  font-size: 22px;
+}
+
+nav .nav-right .nav-profile {
+  display: flex;
+  align-items: center;
+}
+
+nav .nav-right .img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+nav .nav-right img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Navbar */
@@ -21,7 +96,7 @@ nav {
 
 aside {
   grid-area: sidebar;
-  background-color: #fff;
+  background-color: var(--light);
   height: 100vh;
 }
 

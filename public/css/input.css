@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply grid-cols-[60px_1fr] sm:grid-cols-[225px_1fr];
+  }
+  nav {
+    @apply m-[6px_9px] sm:m-[9px_14px];
+  }
+}
+
+@layer components {
+  .btn {
+    @apply flex items-center gap-2 text-[12px] font-semibold;
+  }
+
+  .btn button {
+    @apply py-1 px-2 rounded;
+  }
+
+  nav .nav-left .btn button {
+    @apply p-[9px_12px] sm:p-[6px_14px];
+  }
+}
+
+@layer utilities {
+  /*  */
+}
